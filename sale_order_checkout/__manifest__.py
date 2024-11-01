@@ -13,14 +13,14 @@
     ],
     'assets':{
         'web.assets_backend': [
-            'sale_order_checkout/static/src/views/sale_dashboard.xml',
-            'sale_order_checkout/static/src/views/sale_dashboard.js',            
-            'sale_order_checkout/static/src/views/sale_listview.xml',
-            'sale_order_checkout/static/src/views/sale_listview.js',
+            'sale_order_checkout/static/src/views/*.xml',
+            'sale_order_checkout/static/src/views/*.js',
 
-            'sale_order_checkout/static/src/bundle/dashboard_action/dashboard_action.xml',
-            'sale_order_checkout/static/src/bundle/dashboard_action/dashboard_action.scss',
-            'sale_order_checkout/static/src/bundle/dashboard_action/dashboard_action.js',
+            'sale_order_checkout/static/src/bundle/component/total_sales/*',
+            'sale_order_checkout/static/src/bundle/component/revenue/*',
+            'sale_order_checkout/static/src/bundle/component/average_order_value/*',
+            'sale_order_checkout/static/src/bundle/component/total_orders/*',
+            'sale_order_checkout/static/src/bundle/dashboard_action/*',
         ],
         'web.assets_fontend': [
        
