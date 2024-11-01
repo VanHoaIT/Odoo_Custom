@@ -4,6 +4,9 @@ import { Component, useState, onWillStart } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 
 import { TotalSales } from "../component/total_sales/total_sales";
+import { Revenue } from "../component/revenue/revenue";
+import { AverageOrderValue } from "../component/average_order_value/average_order_value";
+import { TotalOrder } from "../component/total_orders/total_orders";
 
 export class SpreadsheetDashboardAction extends Component {
     setup() {
@@ -56,7 +59,10 @@ export class SpreadsheetDashboardAction extends Component {
 
 SpreadsheetDashboardAction.template = "sale_order_checkout.DashboardAction";
 SpreadsheetDashboardAction.components = {
-    TotalSales
+    TotalSales,
+    Revenue,
+    AverageOrderValue,
+    TotalOrder
 };
 SpreadsheetDashboardAction.props = { };
 

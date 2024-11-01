@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
-    <t t-name="sale_order_checkout.TotalSales">
+    <t t-name="sale_order_checkout.TotalOrder">
         <div class="total-sales">
-            <h2>Total Sales</h2>
+            <h2>Total Order</h2>
             <span t-out="props.currentMonthSales"/> (Current Month)
             <span t-out="props.previousMonthSales"/> (Previous Month)
             <div>

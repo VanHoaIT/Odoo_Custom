@@ -2,7 +2,7 @@
 import { Component } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 
-export class TotalSales extends Component {
+export class AverageOrderValue extends Component {
     static props = {
         currentMonthSales: { type: Number, optional: false },
         previousMonthSales: { type: Number, optional: false },
@@ -11,5 +11,5 @@ export class TotalSales extends Component {
 }
 
 // Gán template cho component
-TotalSales.template = "sale_order_checkout.TotalSales";
-registry.category("components").add("sale_sub_dashboard_total", TotalSales)
+AverageOrderValue.template = "sale_order_checkout.AverageOrderValue";
+registry.category("components").add("sale_sub_dashboard_average_order_value", AverageOrderValue)
