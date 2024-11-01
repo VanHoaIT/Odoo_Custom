@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <t t-name="sale_order_checkout.TotalSales">
+        <div class="total-sales">
+            <h2>Total Sales</h2>
+            <span t-out="props.currentMonthSales"/> (Current Month)
+            <span t-out="props.previousMonthSales"/> (Previous Month)
+            <span t-att-class="props.growthPercentage > 0 ? 'text-success' : 'text-danger'" 
+                  t-out="props.growthPercentage + '%'"/>
+        </div>
+    </t>
+    
+</template>

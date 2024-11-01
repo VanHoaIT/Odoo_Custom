@@ -18,6 +18,9 @@
             'sale_order_checkout/static/src/views/sale_listview.xml',
             'sale_order_checkout/static/src/views/sale_listview.js',
 
+            'sale_order_checkout/static/src/bundle/total_sales/total_sales.xml',
+            'sale_order_checkout/static/src/bundle/total_sales/total_sales.js',
+
             'sale_order_checkout/static/src/bundle/dashboard_action/dashboard_action.xml',
             'sale_order_checkout/static/src/bundle/dashboard_action/dashboard_action.scss',
             'sale_order_checkout/static/src/bundle/dashboard_action/dashboard_action.js',
