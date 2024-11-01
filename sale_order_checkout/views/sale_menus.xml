@@ -1,0 +1,23 @@
+<odoo>
+
+    <menuitem id="sale_order_menu_2"
+            name="Dashboard 5"
+            sequence="15"
+            parent="sale.sale_menu_root">
+            
+            <menuitem id="menu_sale_order_2"
+                name="Order 3"
+                action="sale.action_orders"
+                groups="sales_team.group_sale_salesman"
+                sequence="10"/>
+            
+            <menuitem id="menu_sale_order_3"
+                name="Dashboard overviews 3"
+                action="ir_actions_dashboard_sale"
+                groups="sales_team.group_sale_salesman"
+                sequence="20"/>
+
+    </menuitem>
+
+        
+</odoo>

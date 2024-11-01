@@ -1,0 +1,39 @@
+<odoo>
+    <record id="view_order_checkout" model="ir.ui.view">
+        <field name="name">sale.order.checkout</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_order']" position="after">
+                <field name="check_out_date" string="Check-out Date"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- <record id="view_order_hide" model="ir.ui.view">
+        <field name="name">sale.order.hide</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='validity_date']" position="replace"/>
+        </field>
+    </record> -->
+
+    <record id="sale_order_dashboard_tree" model="ir.ui.view">
+        <field name="name">sale.order.dashboard.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="priority" eval="20"/> 
+        <field name="arch" type="xml">
+            <xpath expr="/tree" position="attributes">
+                <attribute name="js_class">sale_dashboard_list</attribute> 
+            </xpath>
+        </field>
+    </record>
+
+    <record id="ir_actions_dashboard_sale" model="ir.actions.client">
+        <field name="name">Dashboards 33</field>
+        <field name="tag">action_spreadsheet_dashboard_sale</field>
+    </record>
+
+</odoo>

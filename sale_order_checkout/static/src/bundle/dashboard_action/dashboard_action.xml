@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <div t-name="sale_order_checkout.DashboardAction" class="o_action o_spreadsheet_dashboard_action o_field_highlight">
+        <div class="o_sale_dashboard_layout d-flex">
+            <div class="o_select_month">
+                <label for="month_select">Select month: </label>
+                <select t-on-change="onMonthChange">
+                    <t t-foreach="state.months" t-as="month" t-key="month.value">
+                        <option t-att-value="month.value" t-esc="month.name" t-att-selected="month.value === state.selectedMonth"/>
+                    </t>
+                </select>
+            </div>
+        </div> 
+        <div class="o_sale_dashboard_layout d-flex">
+            <div class="o_sale_dashboard_column_left d-flex justify-content-between">
+
+                <div class="o_sale_dashboard_metric d-flex justify-content-between">
+                    <div>
+                        <h3>Total Sales</h3>
+                        <span t-out="state.activeDashboard['number_sale_current_month']"/>
+                        <p class='o_sale_p_percentage'>
+                            <t t-if="state.activeDashboard['growth_percentage_number_sale'] > 0">Increased By </t>
+                            <t t-else="">Decreased By </t>
+                            <span t-att-class="state.activeDashboard['growth_percentage_number_sale'] > 0 ? 'text-success' : 'text-danger'" t-out="state.activeDashboard['growth_percentage_number_sale'] + '%'"/>
+                            <img t-att-src="state.activeDashboard['growth_percentage_number_sale'] > 0 ? '/sale_order_checkout/static/src/img/increase.png' : '/sale_order_checkout/static/src/img/decrease.png'" alt="icon"/>
+                        </p>
+                    </div>
+                    <div class="o_metric_icon">
+                        <img src="/sale_order_checkout/static/src/img/total-sale.png" alt="icon"/>
+                    </div>
+                </div>
+
+                <div class="o_sale_dashboard_metric d-flex justify-content-between">
+                    <div>
+                        <h3>Revenue</h3>
+                        <span t-out="state.activeDashboard['total_sale_current_month']"/>
+                        <p class='o_sale_p_percentage'>
+                            <t t-if="state.activeDashboard['growth_percentage_total_sale'] > 0">Increased By </t>
+                            <t t-else="">Decreased By </t>
+                            <span t-att-class="state.activeDashboard['growth_percentage_total_sale'] > 0 ? 'text-success' : 'text-danger'" t-out="state.activeDashboard['growth_percentage_total_sale'] + '%'"/>
+                            <img t-att-src="state.activeDashboard['growth_percentage_total_sale'] > 0 ? '/sale_order_checkout/static/src/img/increase.png' : '/sale_order_checkout/static/src/img/decrease.png'" alt="icon"/>
+                        </p>
+                    </div>
+                    <div class="o_metric_icon">
+                        <img src="/sale_order_checkout/static/src/img/user.svg" alt="icon"/>
+                    </div>
+                </div>
+
+                <div class="o_sale_dashboard_metric d-flex justify-content-between">
+                    <div>
+                        <h3>Average Order Value</h3>
+                        <span t-out="state.activeDashboard['average_order_sale_current_month']"/>
+                        <p class='o_sale_p_percentage'>
+                            <t t-if="state.activeDashboard['growth_percentage_average_order_sale'] > 0">Increased By </t>
+                            <t t-else="">Decreased By </t>
+                            <span t-att-class="state.activeDashboard['growth_percentage_average_order_sale'] > 0 ? 'text-success' : 'text-danger'" t-out="state.activeDashboard['growth_percentage_average_order_sale'] + '%'"/>
+                            <img t-att-src="state.activeDashboard['growth_percentage_average_order_sale'] > 0 ? '/sale_order_checkout/static/src/img/increase.png' : '/sale_order_checkout/static/src/img/decrease.png'" alt="icon"/>
+                        </p>
+                    </div>
+                    <div class="o_metric_icon">
+                        <img src="/sale_order_checkout/static/src/img/sale.svg" alt="icon"/>
+                    </div>
+                </div>
+
+                <div class="o_sale_dashboard_metric d-flex justify-content-between">
+                    <div>
+                        <h3>Total Orders</h3>
+                        <span t-out="state.activeDashboard['total_order_current_month']"/>
+                        <p class='o_sale_p_percentage'>
+                            <t t-if="state.activeDashboard['growth_percentage_total_order'] > 0">Increased By </t>
+                            <t t-else="">Decreased By </t>
+                            <span t-att-class="state.activeDashboard['growth_percentage_total_order'] > 0 ? 'text-success' : 'text-danger'" t-out="state.activeDashboard['growth_percentage_total_order'] + '%'"/>
+                            <img t-att-src="state.activeDashboard['growth_percentage_total_order'] > 0 ? '/sale_order_checkout/static/src/img/increase.png' : '/sale_order_checkout/static/src/img/decrease.png'" alt="icon"/>
+                        </p>
+                    </div>
+                    <div class="o_metric_icon">
+                        <img src="/sale_order_checkout/static/src/img/block.svg" alt="icon"/>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class='o_sale_dashboard_column_left d-flex justify-content-between'>
+                <h2>total sales</h2>
+                <h3>current_month</h3>
+                <h3>previous_month</h3>
+                <h3>growth_percentage</h3>
+            </div>
+
+            <div class='o_sale_dashboard_column_left d-flex justify-content-between'>
+                <h2>total sales</h2>
+                <span t-out="state.activeDashboard['number_sale_current_month']"/>
+                <span t-out="state.activeDashboard['number_sale_previous_month']"/>
+                <span t-att-class="state.activeDashboard['growth_percentage_number_sale'] > 0 ? 'text-success' : 'text-danger'" 
+                t-out="state.activeDashboard['growth_percentage_number_sale'] + '%'"/>
+            </div>
+
+            <div class='o_sale_dashboard_column_left d-flex justify-content-between'>
+                <h2>revenue</h2>
+                <span t-out="state.activeDashboard['total_sale_current_month']"/>
+                <span t-out="state.activeDashboard['total_sale_previous_month']"/>
+                <span t-att-class="state.activeDashboard['growth_percentage_total_sale'] > 0 ? 'text-success' : 'text-danger'" 
+                t-out="state.activeDashboard['growth_percentage_total_sale'] + '%'"/>
+            </div>
+
+            <div class='o_sale_dashboard_column_left d-flex justify-content-between'>
+                <h2>average</h2>
+                <span t-out="state.activeDashboard['average_order_sale_current_month']"/>
+                <span t-out="state.activeDashboard['average_order_sale_previous_month']"/>
+                <span t-att-class="state.activeDashboard['growth_percentage_average_order_sale'] > 0 ? 'text-success' : 'text-danger'" 
+                t-out="state.activeDashboard['growth_percentage_average_order_sale'] + '%'"/>
+            </div>
+
+            <div class='o_sale_dashboard_column_left d-flex justify-content-between'>
+                <h2>total order</h2>
+                <span t-out="state.activeDashboard['total_order_current_month']"/>
+                <span t-out="state.activeDashboard['total_order_previous_month']"/>
+                <span t-att-class="state.activeDashboard['growth_percentage_total_order'] > 0 ? 'text-success' : 'text-danger'" 
+                t-out="state.activeDashboard['growth_percentage_total_order'] + '%'"/>
+            </div>
+            
+            <!-- <div class="o_sale_dashboard_column_right">
+                <div class="g-col-4 p-0" t-on-click="setSearchContext" title="All Draft RFQs" filter_name="draft_rfqs">
+                    <a href="#" class="btn btn-primary w-100 h-100 border-0 rounded-0 text-capitalize text-break fw-normal">
+                        <div class="fs-2" t-out="state.activeDashboard['total_quotation']"/>All Draft RFQs
+                    </a>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</templates>
