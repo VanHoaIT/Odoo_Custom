@@ -1,0 +1,1647 @@
+{
+    "version": 12,
+    "sheets": [
+        {
+            "id": "sheet1",
+            "name": "Dashboard",
+            "colNumber": 9,
+            "rowNumber": 86,
+            "rows": {
+                "6": {
+                    "size": 40
+                }
+            },
+            "cols": {
+                "0": {
+                    "size": 100
+                },
+                "1": {
+                    "size": 175
+                },
+                "2": {
+                    "size": 100
+                },
+                "3": {
+                    "size": 100
+                },
+                "4": {
+                    "size": 50
+                },
+                "5": {
+                    "size": 100
+                },
+                "6": {
+                    "size": 175
+                },
+                "7": {
+                    "size": 100
+                },
+                "8": {
+                    "size": 100
+                }
+            },
+            "merges": [],
+            "cells": {
+                "A7": {
+                    "style": 1,
+                    "content": "[Count & rent_amount of room](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[[\"state\",\"not in\",[\"draft\",\"cancel\",\"sent\"]]],\"context\":{\"group_by\":[\"date:month\"],\"graph_measure\":\"price_subtotal\",\"graph_mode\":\"line\",\"graph_groupbys\":[\"date:month\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"HostelRoom Analysis Test 123\"})",
+                    "border": 1
+                },
+                "A19": {
+                    "style": 1,
+                    "content": "[Top room rent_amount](odoo://view/{\"viewType\":\"graph\",\"action\":{\"domain\":[[\"state\",\"in\",[\"draft\",\"sent\"]]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"calendar\"],[false,\"pivot\"],[false,\"graph\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Quotations Tesst 123\"})",
+                    "border": 1
+                },
+                "A20": {
+                    "style": 2,
+                    "content": "=_t(\"Name room\")",
+                    "border": 2
+                },
+                "A21": {
+                    "style": 3,
+                    "content": "=ODOO.LIST(1,1,\"room_name\")"
+                },
+                "A22": {
+                    "style": 4,
+                    "content": "=ODOO.LIST(1,2,\"room_name\")"
+                },
+                "A23": {
+                    "style": 3,
+                    "content": "=ODOO.LIST(1,3,\"room_name\")"
+                },
+                "A24": {
+                    "style": 4,
+                    "content": "=ODOO.LIST(1,4,\"room_name\")"
+                },
+                "A25": {
+                    "style": 3,
+                    "content": "=ODOO.LIST(1,5,\"room_name\")"
+                },
+                "A32": {
+                    "style": 1,
+                    "content": "[Top Countries3](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"country_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"country_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"country_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "border": 1
+                },
+                "A33": {
+                    "style": 5,
+                    "content": "=_t(\"Country\")",
+                    "border": 2
+                },
+                "A34": {
+                    "style": 6,
+                    "content": "=ODOO.PIVOT.HEADER(5,\"#country_id\",1)"
+                },
+                "A45": {
+                    "style": 1,
+                    "content": "[Top Customers](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"partner_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"partner_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"partner_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "border": 1
+                },
+                "A46": {
+                    "style": 5,
+                    "content": "=_t(\"Customer1\")",
+                    "border": 2
+                },
+                "A49": {
+                    "style": 6,
+                    "content": "=ODOO.PIVOT.HEADER(4,\"#partner_id\",3)"
+                },
+                "A58": {
+                    "style": 1,
+                    "content": "[Top Sales Teams](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"team_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"team_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"team_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "border": 1
+                },
+                "A59": {
+                    "style": 5,
+                    "content": "=_t(\"Sales Team\")",
+                    "border": 2
+                },
+                "A60": {
+                    "style": 6,
+                    "content": "=ODOO.PIVOT.HEADER(7,\"#team_id\",1)"
+                },
+                "A71": {
+                    "style": 1,
+                    "content": "[Top Sources](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"source_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"source_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"source_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "border": 1
+                },
+                "A72": {
+                    "style": 5,
+                    "content": "=_t(\"Source\")",
+                    "border": 2
+                },
+                "A73": {
+                    "style": 6,
+                    "content": "=ODOO.PIVOT.HEADER(9,\"#source_id\",1)"
+                },
+                "A83": {  
+                    "style": 1,
+                    "content": "[Top 4](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"country_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"product_id\"],\"modelName\":\"sale.report\",\"views\":[[false,\"list\"],[false,\"pivot\"]]},\"threshold\":0,\"name\":\"Top 4 Products\"})",
+                    "border": 1
+                },
+                "A84": {
+                    "style": 5,
+                    "content": "=_t(\"Product\")",
+                    "border": 2
+                },
+                "A85": {
+                    "style": 6,
+                    "content": "=ODOO.PIVOT.HEADER(5,\"#product_id\",1)"
+                },
+                "B19": {
+                    "style": 8,
+                    "border": 1
+                },
+                "B20": {
+                    "style": 2,
+                    "content": "=_t(\"rent_amount\")",
+                    "border": 2
+                },
+                "B21": {
+                    "style": 9,
+                    "content": "=ODOO.LIST(1,1,\"rent_amount\")"
+                },
+                "B22": {
+                    "content": "=ODOO.LIST(1,2,\"rent_amount\")"
+                },
+                "B23": {
+                    "style": 9,
+                    "content": "=ODOO.LIST(1,3,\"rent_amount\")"
+                },
+                "B24": {
+                    "content": "=ODOO.LIST(1,4,\"rent_amount\")"
+                },
+                "B25": {
+                    "style": 9,
+                    "content": "=ODOO.LIST(1,5,\"rent_amount\")"
+                },
+                "B32": {
+                    "style": 8,
+                    "border": 1
+                },
+                "B33": {
+                    "style": 5,
+                    "border": 2
+                },
+                "B34": {
+                    "style": 9
+                },
+                "B36": {
+                    "style": 9
+                },
+                "B38": {
+                    "style": 9
+                },
+                "B40": {
+                    "style": 9
+                },
+                "B42": {
+                    "style": 9
+                },
+                "B45": {
+                    "style": 8,
+                    "border": 1
+                },
+                "B46": {
+                    "style": 5,
+                    "border": 2
+                },
+                "B47": {
+                    "style": 9
+                },
+                "B49": {
+                    "style": 9
+                },
+                "B51": {
+                    "style": 9
+                },
+                "B53": {
+                    "style": 9
+                },
+                "B55": {
+                    "style": 9
+                },
+                "B58": {
+                    "style": 8,
+                    "border": 1
+                },
+                "B59": {
+                    "style": 5,
+                    "border": 2
+                },
+                "B60": {
+                    "style": 9
+                },
+                "B62": {
+                    "style": 9
+                },
+                "B64": {
+                    "style": 9
+                },
+                "B66": {
+                    "style": 9
+                },
+                "B68": {
+                    "style": 9
+                },
+                "B71": {
+                    "style": 8,
+                    "border": 1
+                },
+                "B72": {
+                    "style": 5,
+                    "border": 2
+                },
+                "B73": {
+                    "style": 9
+                },
+                "B75": {
+                    "style": 9
+                },
+                "B77": {
+                    "style": 9
+                },
+                "B79": {
+                    "style": 9
+                },
+                "B81": {
+                    "style": 9
+                },
+                "C19": {
+                    "style": 8,
+                    "border": 1
+                },
+                "C20": {
+                    "style": 2,
+                    "content": "=_t(\"Salesperson1\")",
+                    "border": 2
+                },
+                "C22": {
+                    "content": "=ODOO.LIST(1,2,\"user_id\")"
+                },
+                "C32": {
+                    "style": 8,
+                    "border": 1
+                },
+                "C33": {
+                    "style": 10,
+                    "content": "=_t(\"Orders\")",
+                    "border": 2
+                },
+                "C34": {
+                    "style": 9,
+                    "format": 1,
+                    "content": "=ODOO.PIVOT(5,\"order_reference\",\"#country_id\",1)"
+                },
+                "C45": {
+                    "style": 8,
+                    "border": 1
+                },
+                "C46": {
+                    "style": 10,
+                    "content": "=_t(\"Orders\")",
+                    "border": 2
+                },
+                "C47": {
+                    "style": 9,
+                    "content": "=ODOO.PIVOT(4,\"order_reference\",\"#partner_id\",1)"
+                },
+                "C58": {
+                    "style": 8,
+                    "border": 1
+                },
+                "C59": {
+                    "style": 10,
+                    "content": "=_t(\"Orders\")",
+                    "border": 2
+                },
+                "C60": {
+                    "style": 9,
+                    "format": 1,
+                    "content": "=ODOO.PIVOT(7,\"order_reference\",\"#team_id\",1)"
+                },
+                "C71": {
+                    "style": 8,
+                    "border": 1
+                },
+                "C72": {
+                    "style": 10,
+                    "content": "=_t(\"Orders\")",
+                    "border": 2
+                },
+                "C73": {
+                    "style": 9,
+                    "format": 1,
+                    "content": "=ODOO.PIVOT(9,\"order_reference\",\"#source_id\",1)"
+                },
+                "D19": {
+                    "style": 8,
+                    "border": 1
+                },
+                "D20": {
+                    "style": 11,
+                    "content": "=_t(\"Revenue1\")",
+                    "border": 2
+                },
+                "D21": {
+                    "style": 9,
+                    "content": "=ODOO.LIST(1,1,\"amount_untaxed\")"
+                },
+                "D32": {
+                    "style": 8,
+                    "border": 1
+                },
+                "D33": {
+                    "style": 10,
+                    "content": "=_t(\"Revenue\")",
+                    "border": 2
+                },
+                "D34": {
+                    "style": 9,
+                    "content": "=ODOO.PIVOT(5,\"price_subtotal\",\"#country_id\",1)"
+                },
+                "D45": {
+                    "style": 8,
+                    "border": 1
+                },
+                "D46": {
+                    "style": 10,
+                    "content": "=_t(\"Revenue\")",
+                    "border": 2
+                },
+                "D47": {
+                    "style": 9,
+                    "content": "=ODOO.PIVOT(4,\"price_subtotal\",\"#partner_id\",1)"
+                },
+                "D58": {
+                    "style": 8,
+                    "border": 1
+                },
+                "D59": {
+                    "style": 10,
+                    "content": "=_t(\"Revenue\")",
+                    "border": 2
+                },
+                "D60": {
+                    "style": 9,
+                    "content": "=ODOO.PIVOT(7,\"price_subtotal\",\"#team_id\",1)"
+                },
+                "D71": {
+                    "style": 8,
+                    "border": 1
+                },
+                "D72": {
+                    "style": 10,
+                    "content": "=_t(\"Revenue\")",
+                    "border": 2
+                },
+                "D73": {
+                    "style": 9,
+                    "content": "=ODOO.PIVOT(9,\"price_subtotal\",\"#source_id\",1)"
+                },
+                "E20": {
+                    "style": 12
+                },
+                "F19": {
+                    "style": 1,
+                    "content": "[Top Sales Orders](odoo://view/{\"viewType\":\"list\",\"action\":{\"domain\":[[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[]},\"modelName\":\"sale.order\",\"views\":[[false,\"list\"],[false,\"kanban\"],[false,\"form\"],[false,\"calendar\"],[false,\"pivot\"],[false,\"graph\"],[false,\"activity\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Orders\"})",
+                    "border": 1
+                },
+                "F20": {
+                    "style": 2,
+                    "content": "=_t(\"Order\")",
+                    "border": 2
+                },
+                "F21": {
+                    "style": 3,
+                    "content": "=ODOO.LIST(2,1,\"name\")"
+                },
+                "F32": {
+                    "style": 1,
+                    "content": "[Top Products](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"product_tmpl_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"product_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"product_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "border": 1
+                },
+                "F33": {
+                    "style": 5,
+                    "content": "=_t(\"Product\")",
+                    "border": 2
+                },
+                "F34": {
+                    "style": 6,
+                    "content": "=ODOO.PIVOT.HEADER(6,\"#product_id\",1)"
+                },
+                "F45": {
+                    "style": 1,
+                    "content": "[Top Categories](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"categ_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"categ_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"categ_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "border": 1
+                },
+                "F46": {
+                    "style": 5,
+                    "content": "=_t(\"Category\")",
+                    "border": 2
+                },
+                "F47": {
+                    "style": 6,
+                    "content": "=ODOO.PIVOT.HEADER(3,\"#categ_id\",1)"
+                },
+                "F58": {
+                    "style": 1,
+                    "content": "[Top Salespeople](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"user_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"user_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"user_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "border": 1
+                },
+                "F59": {
+                    "style": 5,
+                    "content": "=_t(\"Salesperson\")",
+                    "border": 2
+                },
+                "F60": {
+                    "style": 6,
+                    "content": "=ODOO.PIVOT.HEADER(8,\"#user_id\",1)"
+                },
+                "F71": {
+                    "style": 1,
+                    "content": "[Top Mediums](odoo://view/{\"viewType\":\"pivot\",\"action\":{\"domain\":[[\"medium_id\",\"!=\",false],[\"state\",\"not in\",[\"draft\",\"sent\",\"cancel\"]]],\"context\":{\"group_by\":[\"medium_id\"],\"pivot_measures\":[\"order_reference\",\"price_subtotal\"],\"pivot_column_groupby\":[],\"pivot_row_groupby\":[\"medium_id\"]},\"modelName\":\"sale.report\",\"views\":[[false,\"graph\"],[false,\"pivot\"],[false,\"search\"]]},\"threshold\":0,\"name\":\"Sales Analysis\"})",
+                    "border": 1
+                },
+                "F72": {
+                    "style": 5,
+                    "content": "=_t(\"Medium\")",
+                    "border": 2
+                },
+                "F73": {
+                    "style": 6,
+                    "content": "=ODOO.PIVOT.HEADER(10,\"#medium_id\",1)"
+                },
+                "G19": {
+                    "style": 8,
+                    "border": 1
+                },
+                "G20": {
+                    "style": 2,
+                    "content": "=_t(\"Customer3\")",
+                    "border": 2
+                },
+                "G21": {
+                    "style": 9,
+                    "content": "=ODOO.LIST(2,1,\"partner_id\")"
+                },
+                "G32": {
+                    "style": 8,
+                    "border": 1
+                },
+                "G33": {
+                    "style": 5,
+                    "border": 2
+                },
+                "G34": {
+                    "style": 9
+                },
+                "G36": {
+                    "style": 9
+                },
+                "G38": {
+                    "style": 9
+                },
+                "G40": {
+                    "style": 9
+                },
+                "G42": {
+                    "style": 9
+                },
+                "G45": {
+                    "style": 8,
+                    "border": 1
+                },
+                "G46": {
+                    "style": 5,
+                    "border": 2
+                },
+                "G47": {
+                    "style": 9
+                },
+                "G49": {
+                    "style": 9
+                },
+                "G51": {
+                    "style": 9
+                },
+                "G53": {
+                    "style": 9
+                },
+                "G55": {
+                    "style": 9
+                },
+                "G58": {
+                    "style": 8,
+                    "border": 1
+                },
+                "G59": {
+                    "style": 5,
+                    "border": 2
+                },
+                "G60": {
+                    "style": 9
+                },
+                "G62": {
+                    "style": 9
+                },
+                "G64": {
+                    "style": 9
+                },
+                "G66": {
+                    "style": 9
+                },
+                "G68": {
+                    "style": 9
+                },
+                "G71": {
+                    "style": 8,
+                    "border": 1
+                },
+                "G72": {
+                    "style": 5,
+                    "border": 2
+                },
+                "G73": {
+                    "style": 9
+                },
+                "G75": {
+                    "style": 9
+                },
+                "G77": {
+                    "style": 9
+                },
+                "G79": {
+                    "style": 9
+                },
+                "G81": {
+                    "style": 9
+                },
+                "H19": {
+                    "style": 8,
+                    "border": 1
+                },
+                "H20": {
+                    "style": 2,
+                    "content": "=_t(\"Salesperson\")",
+                    "border": 2
+                },
+                "H21": {
+                    "style": 9,
+                    "content": "=ODOO.LIST(2,1,\"user_id\")"
+                },
+                "H32": {
+                    "style": 8,
+                    "border": 1
+                },
+                "H33": {
+                    "style": 10,
+                    "content": "=_t(\"Orders\")",
+                    "border": 2
+                },
+                "H34": {
+                    "style": 9,
+                    "format": 1,
+                    "content": "=ODOO.PIVOT(6,\"order_reference\",\"#product_id\",1)"
+                },
+                "H45": {
+                    "style": 8,
+                    "border": 1
+                },
+                "H46": {
+                    "style": 10,
+                    "content": "=_t(\"Orders\")",
+                    "border": 2
+                },
+                "H47": {
+                    "style": 9,
+                    "format": 1,
+                    "content": "=ODOO.PIVOT(3,\"order_reference\",\"#categ_id\",1)"
+                },
+                "H58": {
+                    "style": 8,
+                    "border": 1
+                },
+                "H59": {
+                    "style": 10,
+                    "content": "=_t(\"Orders\")",
+                    "border": 2
+                },
+                "H60": {
+                    "style": 9,
+                    "format": 1,
+                    "content": "=ODOO.PIVOT(8,\"order_reference\",\"#user_id\",1)"
+                },
+                "H71": {
+                    "style": 8,
+                    "border": 1
+                },
+                "H72": {
+                    "style": 10,
+                    "content": "=_t(\"Orders\")",
+                    "border": 2
+                },
+                "H73": {
+                    "style": 9,
+                    "format": 1,
+                    "content": "=ODOO.PIVOT(10,\"order_reference\",\"#medium_id\",1)"
+                },
+                "I19": {
+                    "style": 8,
+                    "border": 1
+                },
+                "I20": {
+                    "style": 11,
+                    "content": "=_t(\"Revenue\")",
+                    "border": 2
+                },
+                "I21": {
+                    "style": 9,
+                    "content": "=ODOO.LIST(2,1,\"amount_untaxed\")"
+                },
+                "I32": {
+                    "style": 8,
+                    "border": 1
+                },
+                "I33": {
+                    "style": 10,
+                    "content": "=_t(\"Revenue\")",
+                    "border": 2
+                },
+                "I34": {
+                    "style": 9,
+                    "content": "=ODOO.PIVOT(6,\"price_subtotal\",\"#product_id\",1)"
+                },
+                "I45": {
+                    "style": 8,
+                    "border": 1
+                },
+                "I46": {
+                    "style": 10,
+                    "content": "=_t(\"Revenue\")",
+                    "border": 2
+                },
+                "I47": {
+                    "style": 9,
+                    "content": "=ODOO.PIVOT(3,\"price_subtotal\",\"#categ_id\",1)"
+                },
+                "I58": {
+                    "style": 8,
+                    "border": 1
+                },
+                "I59": {
+                    "style": 10,
+                    "content": "=_t(\"Revenue\")",
+                    "border": 2
+                },
+                "I60": {
+                    "style": 9,
+                    "content": "=ODOO.PIVOT(8,\"price_subtotal\",\"#user_id\",1)"
+                },                
+                "I71": {
+                    "style": 8,
+                    "border": 1
+                },
+                "I72": {
+                    "style": 10,
+                    "content": "=_t(\"Revenue\")",
+                    "border": 2
+                },
+                "I73": {
+                    "style": 9,
+                    "content": "=ODOO.PIVOT(10,\"price_subtotal\",\"#medium_id\",1)"
+                },
+                "A8": {
+                    "border": 2
+                },
+                "B7": {
+                    "border": 1
+                },
+                "B8": {
+                    "border": 2
+                },
+                "C7": {
+                    "border": 1
+                },
+                "C8": {
+                    "border": 2
+                },
+                "D7": {
+                    "border": 1
+                },
+                "D8": {
+                    "border": 2
+                },
+                "E7": {
+                    "border": 1
+                },
+                "E8": {
+                    "border": 2
+                },
+                "F7": {
+                    "border": 1
+                },
+                "F8": {
+                    "border": 2
+                },
+                "G7": {
+                    "border": 1
+                },
+                "G8": {
+                    "border": 2
+                },
+                "H7": {
+                    "border": 1
+                },
+                "H8": {
+                    "border": 2
+                },
+                "I7": {
+                    "border": 1
+                },
+                "I8": {
+                    "border": 2
+                }
+            },
+            "conditionalFormats": [],
+            "figures": [
+
+                {
+                    "id": "51823220-f22b-4359-8711-579a249c91bb",
+                    "x": 40,
+                    "y": 20,
+                    "width": 420,
+                    "height": 120,
+                    "tag": "chart",
+                    "data": {
+                        "baselineColorDown": "#DC6965",
+                        "baselineColorUp": "#00A04A",
+                        "baselineMode": "percentage",
+                        "title": "Hostel Number",
+                        "type": "scorecard",
+                        "background": "#a0a195",                        
+                        "baseline": "",
+                        "baselineDescr": "since last period",
+                        "keyValue": "Data!C2"
+                    }
+                },
+                {
+                    "id": "9a38934c-b454-4a4b-88aa-17d1b80dbf5f",
+                    "x": 500,
+                    "y": 20,
+                    "width": 420,
+                    "height": 120,
+                    "tag": "chart",
+                    "data": {
+                        "baselineColorDown": "#DC6965",
+                        "baselineColorUp": "#00A04A",
+                        "baselineMode": "percentage",
+                        "title": "Hostel_room",
+                        "type": "scorecard",
+                        "background": "#a0a195",
+                        "baseline": "",
+                        "baselineDescr": "Sum room",
+                        "keyValue": "Data!B2"
+                    }
+                },
+                {
+                    "id": "a527960b-0812-4291-baba-f6b4b5280a0d",
+                    "x": 20,
+                    "y": 200,
+                    "width": 400,
+                    "height": 200,
+                    "tag": "chart",
+                    "data": {
+                        "title": "",
+                        "background": "#ffffff",
+                        "legendPosition": "none",
+                        "metaData": {
+                            "groupBy": [
+                                "state"
+                            ],
+                            "measure": "__count",
+                            "order": null,
+                            "resModel": "hostel.room"
+                        },
+                        "searchParams": {
+                            "comparison": null,
+                            "context": {
+                                "group_by_no_leaf": 1,
+                                "group_by": []
+                            },
+                            "domain": [
+                                [
+                                    "state",
+                                    "not in",
+                                    [
+                                        "available"
+                                    ]
+                                ]
+                            ],
+                            "groupBy": [
+                                "state"
+                            ],
+                            "orderBy": []
+                        },
+                        "type": "odoo_bar",
+                        "verticalAxisPosition": "left"
+                    }
+                },
+                {
+                    "id": "a527960b-0812-4291-baba-f6b4b5280a0c",
+                    "x": 440,
+                    "y": 200,
+                    "width": 400,
+                    "height": 200,
+                    "tag": "chart",
+                    "data": {
+                        "title": "",
+                        "background": "#ffffff",
+                        "legendPosition": "none",
+                        "metaData": {
+                            "groupBy": [
+                                "state"
+                            ],
+                            "measure": "rent_amount",
+                            "order": null,
+                            "resModel": "hostel.room"
+                        },
+                        "searchParams": {
+                            "comparison": null,
+                            "context": {
+                                "group_by_no_leaf": 1,
+                                "group_by": []
+                            },
+                            "domain": [
+                                [
+                                    "state",
+                                    "not in",
+                                    [
+                                        "available"
+                                    ]
+                                ]
+                            ],
+                            "groupBy": [
+                                "state"
+                            ],
+                            "orderBy": []
+                        },
+                        "type": "odoo_line",
+                        "verticalAxisPosition": "left"
+                    }
+                }
+
+            ],
+            "areGridLinesVisible": true,
+            "isVisible": true
+        },
+        {
+            "id": "eae01f9c-c461-4489-ade4-957ef2459d40",
+            "name": "Data",
+            "colNumber": 26,
+            "rowNumber": 103,
+            "rows": {},
+            "cols": {
+                "0": {
+                    "size": 160.46142578125
+                },
+                "1": {
+                    "size": 89.46142578125
+                },
+                "2": {
+                    "size": 89.46142578125
+                },
+                "3": {
+                    "size": 89.46142578125
+                },
+                "4": {
+                    "size": 89.46142578125
+                }
+            },
+            "merges": [],
+            "cells": {
+                "A2": {
+                    "content": "=_t(\"Total Hostel Room\")"
+                },
+                "B2": {
+                    "content": "=ODOO.PIVOT(3,\"id\")"
+                },
+                "C2": {
+                    "content": "=2"
+                }
+            },
+            "conditionalFormats": [],
+            "figures": [],
+            "areGridLinesVisible": true,
+            "isVisible": true
+        }
+    ],
+    "entities": {},
+    "styles": {
+        "1": {
+            "textColor": "#2d632d",
+            "backgroundColor": "#F0F0F0",
+            "bold": true,
+            "fontSize": 16,
+            "margin": 20,
+            "border": "1px solid #000",
+            "textAlign": "center"
+        },
+        "2": {
+            "textColor": "#2e2436",
+            "bold": true,
+            "fillColor": ""
+        },
+        "3": {
+            "fillColor": "#f2f2f2",
+            "textColor": "#01666b"
+        },
+        "4": {
+            "textColor": "#01666b"
+        },
+        "5": {
+            "bold": true
+        },
+        "6": {
+            "fillColor": "#f2f2f2",
+            "textColor": "#741b47"
+        },
+        "7": {
+            "textColor": "#741b47"
+        },
+        "8": {
+            "fontSize": 16,
+            "bold": true
+        },
+        "9": {
+            "fillColor": "#f2f2f2"
+        },
+        "10": {
+            "bold": true,
+            "align": "right"
+        },
+        "11": {
+            "bold": true,
+            "fillColor": "",
+            "align": "right"
+        },
+        "12": {
+            "fillColor": ""
+        }
+    },
+    "formats": {
+        "1": "0",
+        "2": "[$$]#,##0",
+        "3": "#,##0"
+    },
+    "borders": {
+        "1": {
+            "bottom": [
+                "Double",
+                "#ff0000"
+            ]
+
+        },
+        "2": {
+            "top": [
+                "thick",
+                "#e9f745"
+            ]
+        }
+    },
+    "revisionId": "START_REVISION",
+    "settings": {
+        "locale": {
+            "name": "English (US)",
+            "code": "en_US",
+            "thousandsSeparator": ",",
+            "decimalSeparator": ".",
+            "dateFormat": "mm/dd/yyyy",
+            "timeFormat": "hh:mm:ss",
+            "formulaArgSeparator": ","
+        }
+    },
+    "chartOdooMenusReferences": {
+        "a527960b-0812-4291-baba-f6b4b5280a0d": "my_hostel.hostel_room_menu",
+        "51823220-f22b-4359-8711-579a249c91bb": "my_hostel.hostel_main_menu",
+        "9a38934c-b454-4a4b-88aa-17d1b80dbf5f": "my_hostel.hostel_room_menu",
+        "a527960b-0812-4291-baba-f6b4b5280a0c": "my_hostel.hostel_room_menu",
+        "67858d0e-b5ba-4a3c-bf9e-c0fceaeedf65": "sale.menu_reporting_sales",
+        "d43375c1-73a6-42a2-8dbd-0f13c285824f": "sale.menu_reporting_sales"
+    },
+    "odooVersion": 4,
+    "lists": {
+        "1": {
+            "columns": [
+                "id",
+                "room_name",
+                "rent_amount"
+            ],
+            "domain": [
+                "|",
+                [
+                    "state",
+                    "=",
+                    "closed"
+                ],
+                [
+                    "state",
+                    "=",
+                    "draft"
+                ]
+            ],
+            "model": "hostel.room",
+            "context": {},
+            "orderBy": [
+                {
+                    "name": "rent_amount",
+                    "asc": false
+                }
+            ],
+            "id": "1",
+            "name": "Hostel Room by rent_amount"
+        },
+        "2": {
+            "columns": [
+                "name",
+                "partner_id",
+                "user_id",
+                "amount_untaxed"
+            ],
+            "domain": [
+                [
+                    "state",
+                    "not in",
+                    [
+                        "draft",
+                        "sent",
+                        "cancel"
+                    ]
+                ]
+            ],
+            "model": "sale.order",
+            "context": {},
+            "orderBy": [
+                {
+                    "name": "amount_untaxed",
+                    "asc": false
+                },
+                {
+                    "name": "invoice_status",
+                    "asc": true
+                }
+            ],
+            "id": "2",
+            "name": "Sales Orders by Untaxed Amount"
+        }
+    },
+    "listNextId": 3,
+    "pivots": {
+        "3": {
+            "colGroupBys": [],
+            "context": {},
+            "domain": [[
+                "state",
+                "in",
+                [
+                    "draft",
+                    "closed"
+                ]
+            ]],
+            "id": "3",
+            "measures": [
+                {
+                    "field": "id",
+                     "aggregation": "count"
+                }
+            ],
+            "model": "hostel.room",
+            "rowGroupBys": ["state"],
+            "name": "Total Room Count",
+            "sortedColumn": null
+        }
+    },
+    "pivotNextId": 4,
+    "globalFilters": [
+        {
+            "id": "13d30fda-b14d-4a56-b186-25468af3b1e9",
+            "type": "date",
+            "label": "Period",
+            "rangeType": "relative",
+            "defaultsToCurrentPeriod": false,
+            "pivotFields": {
+                "3": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "4": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "5": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "6": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "7": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "8": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "9": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "10": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "11": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "12": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": -1
+                }
+            },
+            "listFields": {
+                "1": {
+                    "field": "create_date",
+                    "type": "datetime"
+                },
+                "2": {
+                    "field": "rent_amount",
+                    "type": "monetary"
+                }
+            },
+            "graphFields": {
+                "a527960b-0812-4291-baba-f6b4b5280a0d": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                },
+                "a527960b-0812-4291-baba-f6b4b5280a0c": {
+                    "field": "date",
+                    "type": "datetime",
+                    "offset": 0
+                }
+            }
+        },
+        {
+            "id": "e6db018b-19ec-42c3-b29e-11b1e3910916",
+            "type": "relation",
+            "label": "hostel",
+            "modelName": "hostel.hostel",
+            "defaultValue": [],
+            "defaultValueDisplayNames": [],
+            "rangeType": "year",
+            "defaultsToCurrentPeriod": false,
+            "listFields": {
+                "1": {
+                    "field": "hostel_id",
+                    "type": "many2one"
+                },
+                "2": {
+                    "field": "partner_id.country_id",
+                    "type": "many2one"
+                }
+            },
+            "graphFields": {
+                "a527960b-0812-4291-baba-f6b4b5280a0d": {
+                    "field": "hostel_id",
+                    "type": "many2one"
+                },
+                "a527960b-0812-4291-baba-f6b4b5280a0c": {
+                    "field": "hostel_id",
+                    "type": "many2one"
+                }
+                
+            }
+        },
+        {
+            "id": "dbb716a1-5977-47ee-a53e-ca5716303433",
+            "type": "relation",
+            "label": "Product",
+            "modelName": "product.product",
+            "defaultValue": [],
+            "defaultValueDisplayNames": [],
+            "rangeType": "year",
+            "defaultsToCurrentPeriod": false,
+            "pivotFields": {
+                "3": {
+                    "field": "product_id",
+                    "type": "many2one"
+                },
+                "4": {
+                    "field": "product_id",
+                    "type": "many2one"
+                },
+                "5": {
+                    "field": "product_id",
+                    "type": "many2one"
+                },
+                "6": {
+                    "field": "product_id",
+                    "type": "many2one"
+                },
+                "7": {
+                    "field": "product_id",
+                    "type": "many2one"
+                },
+                "8": {
+                    "field": "product_id",
+                    "type": "many2one"
+                },
+                "9": {
+                    "field": "product_id",
+                    "type": "many2one"
+                },
+                "10": {
+                    "field": "product_id",
+                    "type": "many2one"
+                },
+                "11": {
+                    "field": "product_id",
+                    "type": "many2one"
+                },
+                "12": {
+                    "field": "product_id",
+                    "type": "many2one"
+                }
+            },
+            "listFields": {
+                "1": {
+                    "field": "order_line.product_id",
+                    "type": "many2one"
+                },
+                "2": {
+                    "field": "order_line.product_id",
+                    "type": "many2one"
+                }
+            },
+            "graphFields": {
+                "a527960b-0812-4291-baba-f6b4b5280a0d": {
+                    "field": "product_id",
+                    "type": "many2one"
+                }
+            }
+        },
+        {
+            "id": "7d95fe28-fd13-4805-948c-95742e7d6733",
+            "type": "relation",
+            "label": "Customer6",
+            "modelName": "res.partner",
+            "defaultValue": [],
+            "defaultValueDisplayNames": [],
+            "rangeType": "year",
+            "defaultsToCurrentPeriod": false,
+            "pivotFields": {
+                "3": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "4": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "5": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "6": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "7": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "8": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "9": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "10": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "11": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "12": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                }
+            },
+            "listFields": {
+                "1": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                },
+                "2": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                }
+            },
+            "graphFields": {
+                "a527960b-0812-4291-baba-f6b4b5280a0d": {
+                    "field": "partner_id",
+                    "type": "many2one"
+                }
+            }
+        },
+        
+        {
+            "id": "b75963ca-ab5f-4da5-9c90-67526517e5e7",
+            "type": "relation",
+            "label": "Sales Team",
+            "modelName": "crm.team",
+            "defaultValue": [],
+            "defaultValueDisplayNames": [],
+            "rangeType": "year",
+            "defaultsToCurrentPeriod": false,
+            "pivotFields": {
+                "3": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "4": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "5": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "6": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "7": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "8": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "9": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "10": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "11": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "12": {
+                    "field": "team_id",
+                    "type": "many2one"
+                }
+            },
+            "listFields": {
+                "1": {
+                    "field": "team_id",
+                    "type": "many2one"
+                },
+                "2": {
+                    "field": "team_id",
+                    "type": "many2one"
+                }
+            },
+            "graphFields": {
+                "a527960b-0812-4291-baba-f6b4b5280a0d": {
+                    "field": "team_id",
+                    "type": "many2one"
+                }
+            }
+        },
+        {
+            "id": "4181e8e3-2e7e-42be-a88b-f24acb7d03e7",
+            "type": "relation",
+            "label": "Salesperson",
+            "modelName": "res.users",
+            "defaultValue": [],
+            "defaultValueDisplayNames": [],
+            "rangeType": "year",
+            "defaultsToCurrentPeriod": false,
+            "pivotFields": {
+                "3": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "4": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "5": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "6": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "7": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "8": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "9": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "10": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "11": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "12": {
+                    "field": "user_id",
+                    "type": "many2one"
+                }
+            },
+            "listFields": {
+                "1": {
+                    "field": "user_id",
+                    "type": "many2one"
+                },
+                "2": {
+                    "field": "user_id",
+                    "type": "many2one"
+                }
+            },
+            "graphFields": {
+                "a527960b-0812-4291-baba-f6b4b5280a0d": {
+                    "field": "user_id",
+                    "type": "many2one"
+                }
+            }
+        },
+        {
+            "id": "ec466626-f54a-4955-9611-eaa2719f1afb",
+            "type": "relation",
+            "label": "Source",
+            "modelName": "utm.source",
+            "defaultValue": [],
+            "defaultValueDisplayNames": [],
+            "rangeType": "year",
+            "defaultsToCurrentPeriod": false,
+            "pivotFields": {
+                "3": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "4": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "5": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "6": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "7": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "8": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "9": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "10": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "11": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "12": {
+                    "field": "source_id",
+                    "type": "many2one"
+                }
+            },
+            "listFields": {
+                "1": {
+                    "field": "source_id",
+                    "type": "many2one"
+                },
+                "2": {
+                    "field": "source_id",
+                    "type": "many2one"
+                }
+            },
+            "graphFields": {
+                "a527960b-0812-4291-baba-f6b4b5280a0d": {
+                    "field": "source_id",
+                    "type": "many2one"
+                }
+            }
+        },
+        {
+            "id": "85d94827-6ce2-429c-9775-ef646cfddb6b",
+            "type": "relation",
+            "label": "Medium",
+            "modelName": "utm.medium",
+            "defaultValue": [],
+            "defaultValueDisplayNames": [],
+            "rangeType": "year",
+            "defaultsToCurrentPeriod": false,
+            "pivotFields": {
+                "3": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "4": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "5": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "6": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "7": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "8": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "9": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "10": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "11": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "12": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                }
+            },
+            "listFields": {
+                "1": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                },
+                "2": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                }
+            },
+            "graphFields": {
+                "a527960b-0812-4291-baba-f6b4b5280a0d": {
+                    "field": "medium_id",
+                    "type": "many2one"
+                }
+            }
+        }
+    ]
+}
