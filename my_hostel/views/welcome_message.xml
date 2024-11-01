@@ -1,0 +1,8 @@
+<odoo>
+    <template id="WelcomeMessage">
+        <div>
+            <h1>Hello, <t t-esc="widget.name"/>!</h1>
+            <button t-on-click="() => widget.changeName('Odoo')">Change Name</button>
+        </div>
+    </template>
+</odoo>

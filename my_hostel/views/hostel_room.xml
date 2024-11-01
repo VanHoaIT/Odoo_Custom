@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_hostel_room" model="ir.actions.act_window">
+        <field name="name">Hostel Rooms</field>
+        <field name='type'>ir.actions.act_window</field>
+        <field name="res_model">hostel.room</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class='oe_view_nocontent_create'>Create Hostel Room</p>
+        </field>
+    </record>
+
+    <menuitem id="hostel_room_menu" name="Hostel Rooms" parent="hostel_main_menu" action="action_hostel_room" groups="my_hostel.group_hostel_manager" sequence="2"/>
+    <menuitem id="hostel_type_menu_2" name="Hostel-4" parent="hostel_room_menu" sequence="10"/>
+
+    <menuitem id="hostel_room_menu_2" name="Hostel Rooms 2" parent="hostel_main_menu" sequence="5"/>
+
+    <record id="view_hostel_room_form" model="ir.ui.view">
+        <field name="name">hostel.room.form</field>
+        <field name="model">hostel.room</field>
+        <field name="arch" type="xml">
+            <form string="Hostel Room">
+                <header>
+                    <button name="do_archive" type="object" string="Archive" class="oe_highlight"/>
+                    <field name="active"/>
+                </header>
+                    <button name="make_available" string="Make Available" type="object"/>
+                    <button name="make_closed" string="Make Borrowed" type="object"/>
+                    <field name="state" widget="statusbar"/>
+                <sheet>
+                    <group>
+                        <field name="room_name"/>
+                        <field name="room_no"/>
+                        <field name="floor_no"/>
+                    </group>
+                    <group>
+                        <field name="rent_amount"/>
+                        <field name="currency_id"/>
+                        <field name="remarks"/>
+                    </group>
+                    <group>
+                        <field name="hostel_id"/>
+                        <field name="student_per_room"/>
+                    </group>
+                    <table>
+                        <tr>
+                            <td style="padding-right:10px;">
+                                <field name="student_id"/>
+                            </td>
+                            <td style="padding-right:10px;">
+                                <field name="hostel_amenities_ids"/>
+                            </td>
+                            <td style="padding-right:10px;">
+                                <field name="member_ids"/>
+                            </td>
+                        </tr>
+                    </table>
+                     <group>
+                        <field name="admission_date"/>
+                        <field name="discharge_date"/>
+                        <field name="duration"/>
+                        <button name="log_all_room_members" string="Log Members" type="object"/>
+                        <button name="update_room_no" string="Update Room No" type="object"/>
+                        <button name="find_member" string="Find Members" type="object"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hostel_room_tree" model="ir.ui.view">
+        <field name="name">hostel.room.tree</field>
+        <field name="model">hostel.room</field>
+        <field name="arch" type="xml">
+            <tree js_class="purchase_dashboard_list">
+                <field name="room_name"/>
+                <field name="room_no"/>
+                <field name="floor_no"/>
+                <field name="rent_amount"/>
+                <field name="currency_id"/>
+                <field name="student_per_room"/>
+                <field name="availability"/>
+                <field name="admission_date"/>
+                <field name="discharge_date"/>
+                <field name="duration"/>              
+            </tree>
+        </field>
+    </record>
+</odoo>

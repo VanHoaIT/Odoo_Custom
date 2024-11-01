@@ -1,0 +1,6 @@
+<odoo>
+    <record id="decimal_point" model="decimal.precision">
+        <field name="name">Rating Value</field>
+        <field name="digits" eval="3"></field>
+    </record>
+</odoo>

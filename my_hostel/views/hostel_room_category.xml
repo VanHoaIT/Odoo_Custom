@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_hostel_room_category" model="ir.actions.act_window">
+        <field name="name">Hostel Room Categories</field>
+        <field name="res_model">hostel.room.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first hostel room category
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="hostel_room_category_menu" name="Hostel Room Category" parent="hostel_main_menu" action="action_hostel_room_category" groups="my_hostel.group_hostel_manager" sequence="3"/>
+
+    <record id="view_hostel_room_category_form" model="ir.ui.view">
+        <field name="name">hostel.room.category.form</field>
+        <field name="model">hostel.room.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <button name="create_categories" string="Create Categories" type="object"/>			
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="parent_id"/>
+                        <field name="description"/>
+                    </group>
+                    <field name="child_ids" widget="one2many_list"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hostel_room_category_tree" model="ir.ui.view">
+        <field name="name">hostel.room.category.tree</field>
+        <field name="model">hostel.room.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="parent_id"/>
+                <field name="child_ids"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
