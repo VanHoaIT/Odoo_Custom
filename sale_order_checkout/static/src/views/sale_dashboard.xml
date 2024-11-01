@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="sale_order_checkout.SaleDashboard">
+        <div class="o_dashboard">
+            <div class="g-col-9 g-col-sm-10 grid">
+                <div class="g-col-4 p-0" t-on-click="setSearchContext" title="All Draft RFQs" filter_name="draft_rfqs">
+                    <a href="#" class="btn btn-primary w-100 h-100 border-0 rounded-0 text-capitalize text-break fw-normal">
+                        <div class="fs-2" t-out="saleData['total_quotation']"/>All Draft RFQs
+                    </a>
+                </div>
+                <div class="g-col-4 p-0" t-on-click="setSearchContext" title="All Waiting RFQs" filter_name="waiting_rfqs">
+                    <a href="#" class="btn btn-primary w-100 h-100 border-0 rounded-0 text-capitalize text-break fw-normal">
+                        <div class="fs-2" t-out="saleData['total_sale']"/>All Waiting RFQs
+                    </a>
+                </div>
+                <div class="g-col-4 p-0" t-on-click="setSearchContext" title="All Late RFQs" filter_name="late_rfqs">
+                    <a href="#" class="btn btn-primary w-100 h-100 border-0 rounded-0 text-capitalize text-break fw-normal">
+                        <div class="fs-2" t-out="saleData['number_sale']"/>Number of Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
